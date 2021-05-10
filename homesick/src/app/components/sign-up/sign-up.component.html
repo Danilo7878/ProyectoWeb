@@ -1,0 +1,58 @@
+<body style="height: 100vh;" background="../../../assets/450d4e09-05c2-469b-8de8-c6f94290d5d8.jpeg" >
+<nav class="blue">
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo light-green-text text-accent-3 center"> <img src="../../../assets/homesick-logo.png" width="55" height="55"> HomeSick</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a class="black-text" routerLink="/Login">Login</a></li>
+        </ul>
+      </div>
+</nav>
+
+<br>
+<br>
+<br>
+
+<div class="container blue">
+    <br>
+    <br>
+    <div class="container">
+        <div class="container"> 
+            <h4 class="black-text">Sign Up</h4>
+        </div>
+        <div class="container">
+            <div class="card">
+                <form (submit)="signUp()">
+                    <div class="container">
+                        <br>
+                        <br>
+                        <div>
+                            <input type="text" [(ngModel)]="user.firstname" name="firstname" class="form-control" placeholder="Firstname" required autofocus>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" [(ngModel)]="user.lastname" name="lastname" class="form-control" placeholder="Lastname" required autofocus>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" [(ngModel)]="user.email" name="email" class="form-control" placeholder="Email" required autofocus>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="password" [(ngModel)]="user.password" name="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="container">
+                        <button class="btn btn-primary btn-block">
+                            SignUp
+                        </button>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+</body>

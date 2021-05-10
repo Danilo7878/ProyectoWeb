@@ -1,0 +1,55 @@
+<body style="height: 100vh;" background="../../../assets/450d4e09-05c2-469b-8de8-c6f94290d5d8.jpeg" >
+    <app-navbar></app-navbar>
+        <br>
+        <br>
+        <br>
+        <div class="container blue">
+            <br>
+            <br>
+            <div class="container">
+                <div class="container">
+                    <i class="medium material-icons light-green-text text-accent-3" routerLink="/Movies">arrow_back</i>  
+                    <h4 class="black-text">Edit a Movie</h4>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <form (submit)="Edit()">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <input type= "hidden" [(ngModel)]="movie._id" name="id" class="form-control" placeholder="ID" required autofocus>
+                                <div>
+                                    <input type="text" [(ngModel)]="movie.title" name="title" class="form-control" placeholder="Title" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="movie.director" name="director" class="form-control" placeholder="Director" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="movie.company" name="company" class="form-control" placeholder="Company" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="movie.genre" name="genre" class="form-control" placeholder="Genre" required>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="movie.realese" name="realese" class="form-control" placeholder="Realese" required>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="container">
+                                <button class="btn btn-primary btn-block">
+                                    Edit
+                                </button>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        </body>

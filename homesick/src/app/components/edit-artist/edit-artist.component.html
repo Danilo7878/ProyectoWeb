@@ -1,0 +1,47 @@
+<body style="height: 100vh;" background="../../../assets/music.jpeg" >
+    <app-navbar></app-navbar>
+        <br>
+        <br>
+        <br>
+        <div class="container blue">
+            <br>
+            <br>
+            <div class="container">
+                <div class="container"> 
+                    <i class="medium material-icons light-green-text text-accent-3" routerLink="/Artists">arrow_back</i> 
+                    <h4 class="black-text">Edit an Artist</h4>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <form (submit)="Edit()">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <input type= "hidden" [(ngModel)]="artist._id" name="id" class="form-control" placeholder="ID" required autofocus>
+                                <div>
+                                    <input type="text" [(ngModel)]="artist.name" name="name" class="form-control" placeholder="Name" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="artist.genre" name="genre" class="form-control" placeholder="Genre" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="artist.state" name="state" class="form-control" placeholder="Status" required autofocus>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="container">
+                                <button class="btn btn-primary btn-block">
+                                    Create
+                                </button>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        </body>

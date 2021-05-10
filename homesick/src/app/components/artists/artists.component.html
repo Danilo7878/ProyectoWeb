@@ -1,0 +1,52 @@
+<body style="height: 100vh;" background="../../../assets/music.jpeg" >
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+  <div class="container blue">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col s1">
+            <i class="large material-icons">music_note</i>
+          </div>
+          <div class="col s3"> </div>
+          <h4 class="light-green-text text-accent-3">
+            artists
+          </h4>
+          <div class="col s6"> </div>
+          <h6 routerLink = "/CreateArtist"><i  class="small material-icons">add_circle</i>add a new artist</h6>
+        </div>
+      </div>
+    <div class="card">
+      <table class="striped">
+        <thead class="teal lighten-2">
+          <tr>
+              <th>Name</th>
+              <th>Genre</th>
+              <th>Status</th>
+              <th>Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let artist of artists">
+            <td>{{artist.name}}</td>
+            <td>{{artist.genre}}</td>
+            <td>{{artist.state}}</td>
+            <td>
+              <a (click) = "editArtist(artist)" class><i class="material-icons">edit</i></a>
+              <a (click) = "deleteArtist(artist._id)" class><i class="material-icons">delete</i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <br>
+    <br>
+  </div>
+  </div>
+  </body>

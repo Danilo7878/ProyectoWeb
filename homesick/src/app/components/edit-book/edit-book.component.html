@@ -1,0 +1,51 @@
+<body style="height: 100vh;" background="../../../assets/450d4e09-05c2-469b-8de8-c6f94290d5d8.jpeg" >
+    <app-navbar></app-navbar>
+        <br>
+        <br>
+        <br>
+        <div class="container blue">
+            <br>
+            <br>
+            <div class="container">
+                <div class="container">
+                    <i class="medium material-icons light-green-text text-accent-3" routerLink="/Home">arrow_back</i> 
+                    <h4 class="black-text">Edit a Book</h4>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <form (submit)="Edit()">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <input type= "hidden" [(ngModel)]="book._id" name="id" class="form-control" placeholder="ID" required autofocus>
+                                <div>
+                                    <input type="text" [(ngModel)]="book.title" name="title" class="form-control" placeholder="Title" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="book.author" name="author" class="form-control" placeholder="Author" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="book.genre" name="genre" class="form-control" placeholder="Genre" required autofocus>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="text" [(ngModel)]="book.year" name="year" class="form-control" placeholder="Year" required>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="container">
+                                <button class="btn btn-primary btn-block">
+                                    Edit
+                                </button>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        </body>
