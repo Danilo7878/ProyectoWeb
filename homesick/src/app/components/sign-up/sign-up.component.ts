@@ -33,7 +33,7 @@ export class SignUpComponent implements OnInit {
         this.router.navigate(['/Login']),
         M.toast({html: 'You have been successfully registered, Please Login'})
       },
-      err => console.log(err)
+      err => M.toast({html: 'this email is already used'})
     )
   }
 
